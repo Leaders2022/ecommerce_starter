@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     #customapps
     'core',
+    'userauths',
 ]
 
 MIDDLEWARE = [
@@ -131,8 +132,8 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles')]
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutofield'
+#
+# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutofield'
 
 
 JAZZMIN_SETTINGS = {
@@ -141,3 +142,5 @@ JAZZMIN_SETTINGS = {
     'site_logo': 'static/img/logo.png',
     'copyright': 'eshopper.com',
 }
+
+AUTH_USER_MODEL = 'userauths.User'
