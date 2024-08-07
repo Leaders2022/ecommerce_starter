@@ -1,7 +1,9 @@
-from django.urls import path
+from django.urls import path, include
+from django.conf import settings
 from userauths import views
+from django.conf.urls.static import static
 
 app_name = 'userauths'
 urlpatterns = [
-    path("sign-up/", views.register_view, name="sign-up"),
+    path("register/", views.register, name="register"),
 ]

@@ -7,10 +7,10 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('checkout/', views.checkout, name='checkout'),
     path('cart/', views.cart, name='cart'),
-    path('detail/', views.cart, name='detail'),
-    path('login/', views.cart, name='login'),
-    path('register/', views.cart, name='register'),
-    path('base/', views.cart, name='base'),
+    path('detail/', views.detail, name='detail'),
+    path('login/', views.login, name='login'),
+    # path('register/', views.register, name='register'),
+    path('base/', views.base, name='base'),
 
 
     ]

@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from userauths import views as user_view
+from django.contrib.auth import views as auth
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -23,6 +25,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("core.urls")),
     path("user/", include("userauths.urls")),
+    # path('login/', user_view.Login, name='login'),
+    path('logout/', auth.LogoutView.as_view(template_name='index.html'), name='logout'),
+    path('register/', user_view.register, name='register'),
 ]
 
 if settings.DEBUG:
